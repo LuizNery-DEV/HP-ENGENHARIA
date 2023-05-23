@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Orçamento de Engenharia Civil</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+    }
+  
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+    }
+  
+    h1 {
+      text-align: center;
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+  
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+  
+    select {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+  
+    button {
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  
+    button:hover {
+      background-color: #45a049;
+    }
+  
+    .success-message {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+      border-radius: 3px;
+      color: #155724;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Orçamento de Engenharia Civil</h1>
+  
+    <form id="orcamentoForm">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required>
+  
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" required>
+  
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" required>
+  
+      <label for="tipoServico">Tipo de Serviço:</label>
+      <select id="tipoServico" required>
+        <option value="">Selecione</option>
+        <option value="projeto">Projeto</option>
+        <option value="consultoria">Consultoria</option>
+        <option value="gerenciamento">Gerenciamento</option>
+      </select>
+  
+      <label for="descricao">Descrição:</label>
+      <textarea id="descricao" required></textarea>
+  
+      <button type="submit">Enviar Orçamento</button>
+    </form>
+  
+    <div id="successMessage" class="success-message" style="display: none;"></div>
+  </div>
+  
+  <script>
+    // Código JavaScript
+    document.getElementById("orcamentoForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Evita o envio do formulário
+  
+      // Obtém os valores dos campos do formulário
+      var nome = document.getElementById("nome").value;
+      var email = document.getElementById("email").value;
+      var telefone = document.getElementById("telefone").value;
+      var tipoServico = document.getElementById("tipoServico").value;
+    }      
